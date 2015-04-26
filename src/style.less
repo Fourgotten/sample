@@ -1,0 +1,132 @@
+// out: ../css/style.css
+
+@import "reset.less";
+//@import "animate.less";
+
+//Переменные
+@width: 1170px;
+@g-big: 40px;
+@g-medium: 20px;
+@g-small: 10px;
+
+@body-bg: #fff;
+@primary: #2c3e50;
+@secondary: #1bc2ec;
+
+@text-color: #2c3e50;
+@font: 'PT Sans', sans-serif;
+
+
+
+//Общее
+body{
+    background: @body-bg; 
+
+    
+    font-family: @font;
+    font-size: 16px;
+    color: @text-color;
+}
+section{position: relative; overflow: hidden; text-align: center;
+    
+}
+
+.container{
+    width: @width;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: @width) {
+         width: 96%;
+         padding: @g-big 2%;
+     }
+}
+
+.row{
+    overflow: hidden;
+    
+}
+
+.items{
+    overflow: hidden;
+    .item{
+        float: left;
+        width: 25%;
+        text-align: center;
+        b{display: block;}
+        i{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.alignleft{float: left;}
+.alignright{float: right;}
+
+.placeholder(@c){
+    &::-webkit-input-placeholder {color:@c; font-size: 12px; line-height: 14px;}
+    &::-moz-placeholder          {color:@c; font-size: 12px; line-height: 14px;}
+    &:-moz-placeholder           {color:@c; font-size: 12px; line-height: 14px;}
+    &:-ms-input-placeholder      {color:@c; font-size: 12px; line-height: 14px;}
+}
+
+.heading{
+    color: @secondary;
+    text-align: center;
+    font: 700 40px / 40px @font;
+    margin: 40px 0 20px 0;
+}
+b,strong{font-weight: bold;}
+
+
+.button{
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    background: @secondary;
+    color: @primary;
+    text-align: center;
+    border: 3px solid @primary;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    &.button-phone{padding-left: 5px}
+    &.dblue{background: @primary; color: #fff; border: none;}
+    &.blue{background: @secondary; color: #fff; border: none;}
+    &.orange{background:#ff7800; color: #fff; border: none;}
+    &.transparent{background:none;}
+    i{
+        background: url(../images/icons-sprite.png) -335px 0 no-repeat;
+        width: 39px;
+        height: 39px;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    &:active{
+        outline: none;
+    }
+    &:hover{
+        background-color: #fff;
+    }
+}
+
+.field{
+    background: none;
+    display: block;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 10px;
+    margin: 17px 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    .placeholder(#fff);
+    &:focus{outline: 0;}
+}
