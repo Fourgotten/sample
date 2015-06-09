@@ -1,0 +1,19 @@
+{
+  "name": "site-sample",
+  "version": "1.0.0",
+  "description": "Project sample",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fourgotten/sample.git"
+  },
+  "author": "A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fourgotten/sample/issues"
+  },
+  "homepage": "https://github.com/Fourgotten/sample#readme"
+}
